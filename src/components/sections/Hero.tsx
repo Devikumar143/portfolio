@@ -30,7 +30,7 @@ export default function Hero() {
   }, [roles.length]);
 
   const handleDownloadResume = () => {
-    window.open("/Jedevi_Kumar_Resume.pdf", "_blank");
+    window.open("/Jedevi_Kumar_Resume.html", "_blank");
   };
 
   return (
