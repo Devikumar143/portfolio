@@ -19,9 +19,9 @@ export default function Footer() {
         <div className="flex flex-col gap-1 text-center md:text-left">
           <p className="text-xs text-gray-500 font-medium">
             Designed & Developed by{" "}
-            <span className="text-gray-300 font-semibold font-mono">Devi Kumar</span>
+            <span className="text-gray-300 font-semibold font-mono">Jedevi Kumar</span>
           </p>
-          <p className="text-[10px] text-gray-600 font-mono">© 2026 Devi Kumar. All rights reserved.</p>
+          <p className="text-[10px] text-gray-600 font-mono">© 2026 Jedevi Kumar. All rights reserved.</p>
         </div>
 
         {/* Right Side: Back to top */}

@@ -33,7 +33,7 @@ export default function Contact() {
   };
 
   const handleDownloadResume = () => {
-    window.open("/Devi_Kumar_Resume.html", "_blank");
+    window.open("/Jedevi_Kumar_Resume.html", "_blank");
   };
 
   const socialLinks = [

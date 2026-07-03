@@ -79,7 +79,7 @@ export default function About() {
               transition={{ duration: 0.5, delay: 0.1 }}
               className="text-xl md:text-2xl font-bold text-white tracking-tight"
             >
-              Hi, I'm Devi Kumar.
+              Hi, I'm Jedevi Kumar.
             </motion.h3>
 
             <motion.p
@@ -159,7 +159,7 @@ export default function About() {
 
               {/* Identity summary block */}
               <div className="mt-8 text-center relative z-10">
-                <h4 className="text-lg font-bold font-mono tracking-wide text-white">DEVI KUMAR</h4>
+                <h4 className="text-lg font-bold font-mono tracking-wide text-white">JEDEVI KUMAR</h4>
                 <p className="text-xs font-mono text-zinc-500 mt-1">ROLE: SYS_ENG_DEV</p>
                 <div className="mt-4 flex gap-1.5 justify-center">
                   <span className="px-2 py-0.5 text-[9px] font-mono uppercase bg-zinc-900/60 text-zinc-300 rounded border border-zinc-800">Kotlin</span>

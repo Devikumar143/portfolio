@@ -30,7 +30,7 @@ export default function Hero() {
   }, [roles.length]);
 
   const handleDownloadResume = () => {
-    window.open("/Devi_Kumar_Resume.html", "_blank");
+    window.open("/Jedevi_Kumar_Resume.html", "_blank");
   };
 
   return (
@@ -54,15 +54,33 @@ export default function Hero() {
           <span>Android // Systems Architecture</span>
         </motion.div>
 
-        {/* Large Name title with text-reveal */}
-        <motion.h1
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-          className="text-5xl md:text-7xl lg:text-8xl font-extrabold tracking-tighter text-white select-none"
-        >
-          DEVI KUMAR
-        </motion.h1>
+        {/* Large Name title with letter-by-letter spring animation */}
+        <h1 className="text-5xl md:text-7xl lg:text-8xl font-extrabold tracking-tighter text-white select-none flex flex-wrap justify-center mb-2">
+          {Array.from("JEDEVI KUMAR").map((char, index) => (
+            <motion.span
+              key={index}
+              initial={{ opacity: 0, y: 30, rotateX: -60 }}
+              animate={{ opacity: 1, y: 0, rotateX: 0 }}
+              transition={{
+                duration: 0.55,
+                delay: 0.04 * index,
+                type: "spring",
+                damping: 15,
+                stiffness: 120,
+              }}
+              whileHover={{
+                scale: 1.12,
+                color: "#22d3ee",
+                y: -5,
+                transition: { duration: 0.1 }
+              }}
+              className="inline-block cursor-default origin-bottom transition-colors"
+              style={{ marginRight: char === " " ? "0.3em" : "0.02em" }}
+            >
+              {char === " " ? "\u00A0" : char}
+            </motion.span>
+          ))}
+        </h1>
 
         {/* Cycling Typing Text Animator */}
         <div className="h-10 md:h-14 mt-4 flex items-center justify-center overflow-hidden">

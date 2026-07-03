@@ -43,7 +43,7 @@ export default function Navbar() {
           {/* Logo */}
           <a href="#hero" className="flex items-center gap-2 group">
              <span className="text-sm font-semibold tracking-[0.25em] text-gradient-cyan-purple uppercase transition-all">
-              Devi Kumar
+              Jedevi Kumar
             </span>
           </a>
 
