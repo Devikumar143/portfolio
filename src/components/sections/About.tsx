@@ -34,10 +34,10 @@ function CountUp({ to, duration = 1.5 }: { to: number; duration?: number }) {
 
 export default function About() {
   const stats = [
-    { value: 15, suffix: "+", label: "Projects Built", icon: Smartphone, color: "cyan" },
-    { value: 5, suffix: "+", label: "Android Systems", icon: Cpu, color: "purple" },
-    { value: 8, suffix: "+", label: "AI Swarms & Models", icon: Terminal, color: "blue" },
-    { value: 6, suffix: "+", label: "Hackathons Placed", icon: Award, color: "cyan" },
+    { value: 10, suffix: "", label: "Repositories", icon: Terminal, color: "cyan" },
+    { value: 3, suffix: "", label: "Native Android Apps", icon: Smartphone, color: "purple" },
+    { value: 3, suffix: "", label: "Web Applications", icon: Cpu, color: "blue" },
+    { value: 100, suffix: "%", label: "Open Source", icon: Award, color: "cyan" },
   ];
 
   return (
@@ -89,7 +89,7 @@ export default function About() {
               transition={{ duration: 0.5, delay: 0.2 }}
               className="text-sm md:text-base leading-relaxed"
             >
-              I'm passionate about Android development, mobile architecture, AI-powered applications, distributed systems, and creating products that solve real-world problems.
+              I'm passionate about native Android development, clean mobile architecture, modular web systems, and creating software that solves real-world campus problems.
             </motion.p>
 
             <motion.p
@@ -99,7 +99,7 @@ export default function About() {
               transition={{ duration: 0.5, delay: 0.3 }}
               className="text-sm md:text-base leading-relaxed border-l-2 border-purple-500 pl-4 bg-purple-500/5 py-2.5 rounded-r-xl"
             >
-              I enjoy building unique software instead of ordinary apps. I focus on implementing modular structures, micro-interactions, clean-code paradigms, and futuristic user experiences.
+              I focus on implementing offline-first local cache synchronization, clean architecture models, custom playback systems, and responsive user interfaces.
             </motion.p>
 
             {/* Statistics grid */}
@@ -160,11 +160,11 @@ export default function About() {
               {/* Identity summary block */}
               <div className="mt-8 text-center relative z-10">
                 <h4 className="text-lg font-bold font-mono tracking-wide text-white">DEVI KUMAR</h4>
-                <p className="text-xs font-mono text-zinc-500 mt-1">SHADOW_ID: 8782-B2E1</p>
+                <p className="text-xs font-mono text-zinc-500 mt-1">ROLE: SYS_ENG_DEV</p>
                 <div className="mt-4 flex gap-1.5 justify-center">
                   <span className="px-2 py-0.5 text-[9px] font-mono uppercase bg-zinc-900/60 text-zinc-300 rounded border border-zinc-800">Kotlin</span>
                   <span className="px-2 py-0.5 text-[9px] font-mono uppercase bg-zinc-900/60 text-zinc-300 rounded border border-zinc-800">Android</span>
-                  <span className="px-2 py-0.5 text-[9px] font-mono uppercase bg-zinc-900/60 text-zinc-300 rounded border border-zinc-800">PyTorch</span>
+                  <span className="px-2 py-0.5 text-[9px] font-mono uppercase bg-zinc-900/60 text-zinc-300 rounded border border-zinc-800">Compose</span>
                 </div>
               </div>
             </GlassCard>
