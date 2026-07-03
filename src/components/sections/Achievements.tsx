@@ -19,34 +19,26 @@ export default function Achievements() {
     {
       title: "Personal Projects",
       subtitle: "Open Source Creator",
-      description: "Designed, built, and shipped 15+ functional applications, NDK systems, and library plugins to production and GitHub.",
+      description: "Designed, built, and shipped 10 repositories and multiple clean mobile applications on GitHub.",
       icon: Star,
       color: "cyan",
-      badge: "15+ Shipped",
-    },
-    {
-      title: "Hackathons",
-      subtitle: "Rapid Prototyping Winner",
-      description: "Placed top 3 in 6 premium AI & Mobile Hackathons, creating working prototypes under intensive 36-hour timelines.",
-      icon: Zap,
-      color: "purple",
-      badge: "6x Placed",
+      badge: "10 Repositories",
     },
     {
       title: "Android Engineering",
-      subtitle: "System Optimization",
-      description: "Recognized expert in building micro-animations, Jetpack Compose patterns, custom shaders, and modular architectures.",
+      subtitle: "Native App Development",
+      description: "Specialized in building micro-interactions, Jetpack Compose layouts, background media playback, and Room databases.",
       icon: Award,
-      color: "blue",
-      badge: "Expert Level",
+      color: "purple",
+      badge: "Android Specialist",
     },
     {
-      title: "AI Learning",
-      subtitle: "Distributed Architectures",
-      description: "Researched and built peer-to-peer federated systems, TensorFlow Lite integrations, and edge device intelligence.",
+      title: "Web Applications",
+      subtitle: "Full-Stack Developer",
+      description: "Architect of responsive campus marketplaces, tournament managers, and secure local charting applications.",
       icon: BookOpen,
-      color: "cyan",
-      badge: "AI Explorer",
+      color: "blue",
+      badge: "Full-Stack Web",
     },
   ];
 
@@ -93,7 +85,7 @@ export default function Achievements() {
         </div>
 
         {/* Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {achievements.map((item, index) => {
             const Icon = item.icon;
             const borderColors = "hover:border-zinc-500 text-zinc-300";
