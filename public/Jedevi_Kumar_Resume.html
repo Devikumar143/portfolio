@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Jedevi Kumar - Resume</title>
+  <title>Anegondhi Jedevi Kumar - Resume</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
@@ -32,7 +32,7 @@
     }
 
     .container {
-      max-width: 800px;
+      max-width: 850px;
       margin: 0 auto;
       background-color: rgba(24, 24, 27, 0.4);
       border: 1px solid var(--border);
@@ -53,19 +53,21 @@
     }
 
     .header-left h1 {
-      font-size: 36px;
+      font-size: 32px;
       font-weight: 800;
       letter-spacing: -0.03em;
       color: #fff;
       line-height: 1.1;
+      text-transform: uppercase;
     }
 
     .header-left p {
-      font-size: 16px;
+      font-size: 14px;
       color: var(--accent);
       font-family: 'Space Mono', monospace;
       margin-top: 6px;
       font-weight: 600;
+      letter-spacing: 0.05em;
     }
 
     .header-right {
@@ -88,18 +90,28 @@
       color: var(--accent);
     }
 
-    .grid {
+    .resume-grid {
       display: grid;
-      grid-template-cols: 1fr;
-      gap: 32px;
+      grid-template-cols: 1.8fr 1fr;
+      gap: 40px;
+    }
+
+    @media (max-width: 768px) {
+      .resume-grid {
+        grid-template-cols: 1fr;
+        gap: 30px;
+      }
+      .header-right {
+        align-items: flex-start;
+      }
     }
 
     section {
-      margin-bottom: 16px;
+      margin-bottom: 28px;
     }
 
     h2 {
-      font-size: 14px;
+      font-size: 12px;
       text-transform: uppercase;
       letter-spacing: 0.15em;
       font-family: 'Space Mono', monospace;
@@ -109,107 +121,84 @@
       margin-bottom: 16px;
     }
 
-    .skills-flex {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
+    .summary-text {
+      font-size: 13.5px;
+      color: var(--text-muted);
+      text-align: justify;
+      margin-bottom: 6px;
+      line-height: 1.6;
     }
 
-    .skill-badge {
-      font-size: 12px;
-      font-family: 'Space Mono', monospace;
-      background-color: var(--panel);
-      border: 1px solid var(--border);
-      color: var(--text);
-      padding: 4px 10px;
-      border-radius: 6px;
+    .skills-list {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .skill-item {
+      font-size: 13px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--text-muted);
+    }
+
+    .skill-item::before {
+      content: "•";
+      color: var(--accent);
+      font-weight: bold;
     }
 
     .project-card {
       margin-bottom: 24px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid rgba(39, 39, 42, 0.4);
     }
 
     .project-card:last-child {
       margin-bottom: 0;
-    }
-
-    .project-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-      margin-bottom: 6px;
+      padding-bottom: 0;
+      border-bottom: none;
     }
 
     .project-title {
-      font-size: 18px;
+      font-size: 16px;
       font-weight: 700;
       color: #fff;
+      text-transform: uppercase;
+      letter-spacing: 0.02em;
     }
 
-    .project-links {
-      font-size: 11px;
+    .project-meta {
       font-family: 'Space Mono', monospace;
-      display: flex;
-      gap: 12px;
-    }
-
-    .project-links a {
+      font-size: 11px;
       color: var(--accent);
-      text-decoration: none;
-    }
-
-    .project-desc {
-      font-size: 13.5px;
-      color: var(--text-muted);
-      margin-bottom: 10px;
-      text-align: justify;
+      margin-top: 2px;
+      margin-bottom: 8px;
     }
 
     .project-details {
-      background-color: rgba(24, 24, 27, 0.25);
-      border-left: 2px solid var(--accent);
-      padding: 8px 12px;
-      margin-left: 4px;
-      margin-bottom: 12px;
-      font-size: 12.5px;
-      color: var(--text);
-    }
-
-    .timeline-item {
-      position: relative;
-      padding-left: 24px;
-      margin-bottom: 20px;
-      border-left: 1px solid var(--border);
-    }
-
-    .timeline-item::before {
-      content: '';
-      position: absolute;
-      left: -5px;
-      top: 6px;
-      width: 9px;
-      height: 9px;
-      border-radius: 50%;
-      background-color: var(--accent);
-      border: 2px solid var(--bg);
-    }
-
-    .timeline-year {
-      font-family: 'Space Mono', monospace;
-      font-size: 12px;
-      color: var(--accent);
-      font-weight: 700;
-    }
-
-    .timeline-title {
-      font-size: 15px;
-      font-weight: 600;
-      color: #fff;
-    }
-
-    .timeline-desc {
       font-size: 13px;
       color: var(--text-muted);
+      text-align: justify;
+      line-height: 1.5;
+    }
+
+    .education-block {
+      margin-bottom: 16px;
+    }
+
+    .education-school {
+      font-size: 15px;
+      font-weight: 700;
+      color: #fff;
+      text-transform: uppercase;
+    }
+
+    .education-degree {
+      font-size: 13px;
+      color: var(--accent);
+      font-family: 'Space Mono', monospace;
       margin-top: 2px;
     }
 
@@ -242,8 +231,11 @@
         padding: 0;
       }
       :root {
+        --bg: #fff;
         --accent: #0891b2;
         --border: #e4e4e7;
+        --text: #1f2937;
+        --text-muted: #4b5563;
       }
       .container {
         border: none;
@@ -254,17 +246,11 @@
       .print-btn {
         display: none;
       }
-      .header-left h1, .timeline-title, .project-title {
+      .header-left h1, .project-title, .education-school {
         color: #000;
       }
-      .skill-badge {
-        background-color: #f4f4f5;
-        border-color: #e4e4e7;
-        color: #000;
-      }
-      .project-details {
-        background-color: #fafafa;
-        color: #27272a;
+      .skill-item {
+        color: #374151;
       }
     }
   </style>
@@ -273,107 +259,96 @@
   <div class="container">
     <header>
       <div class="header-left">
-        <h1>Jedevi Kumar</h1>
-        <p>Software Engineer // Android Specialist</p>
+        <h1>Anegondhi Jedevi Kumar</h1>
+        <p>Android // Systems Architecture</p>
       </div>
       <div class="header-right">
         <span>Email: <a href="mailto:anegondhikumar2@gmail.com">anegondhikumar2@gmail.com</a></span>
-        <span>GitHub: <a href="https://github.com/Devikumar143" target="_blank">github.com/Devikumar143</a></span>
+        <span>Phone: <a href="tel:+919392736301">+91 9392736301</a></span>
+        <span>Location: Tanuku, Andhra Pradesh, 534218</span>
         <span>LinkedIn: <a href="https://www.linkedin.com/in/devi-kumar-b3659328a" target="_blank">linkedin.com/in/devi-kumar-b3659328a</a></span>
+        <span>Portfolio: <a href="https://portfolio-weld-two-85.vercel.app/" target="_blank">portfolio-weld-two-85.vercel.app/</a></span>
       </div>
     </header>
 
-    <div class="grid">
-      <section>
-        <h2>Technical Core Skills</h2>
-        <div class="skills-flex">
-          <div class="skill-badge">Kotlin</div>
-          <div class="skill-badge">Android SDK</div>
-          <div class="skill-badge">Jetpack Compose</div>
-          <div class="skill-badge">Media3 / ExoPlayer</div>
-          <div class="skill-badge">Room DB</div>
-          <div class="skill-badge">Firebase</div>
-          <div class="skill-badge">TypeScript</div>
-          <div class="skill-badge">JavaScript</div>
-          <div class="skill-badge">HTML5 / CSS3</div>
-          <div class="skill-badge">Git</div>
-        </div>
-      </section>
+    <div class="resume-grid">
+      <!-- Left Column: Summary & Projects -->
+      <div class="left-col">
+        <section>
+          <h2>Summary</h2>
+          <p class="summary-text">
+            Skilled Android Developer specializing in high-performance native applications with Kotlin and Jetpack Compose. Expertise in scalable mobile architectures using Clean Architecture and MVVM, and integration of frameworks like Media3 and Firebase. Focused on optimizing app performance and creating user-centric designs to deliver exceptional mobile experiences.
+          </p>
+        </section>
 
-      <section>
-        <h2>Key Engineering Projects</h2>
-        
-        <div class="project-card">
-          <div class="project-header">
-            <span class="project-title">Unisphere</span>
-            <div class="project-links">
-              <a href="https://github.com/Devikumar143/unisphere" target="_blank">Codebase</a>
-            </div>
+        <section>
+          <h2>Projects</h2>
+          
+          <div class="project-card">
+            <h3 class="project-title">1. Unisphere</h3>
+            <p class="project-meta">TYPE: NATIVE ANDROID SOCIAL MEDIA APPLICATION // STACK: KOTLIN, JETPACK COMPOSE, ANDROID SDK, FIREBASE, ROOM DB</p>
+            <p class="project-details">
+              A premium social media application designed specifically for students to establish connections, collaborate, share academic resources, and build campus networks.
+            </p>
           </div>
-          <p class="project-desc">A premium social media application designed specifically for students to establish connections, collaborate, share academic resources, and build campus networks.</p>
-          <div class="project-details">
-            <strong>Key Tech Challenge Solved:</strong> Implemented an offline-first repository pattern utilizing Room SQLite as a write-through buffer with automatic transaction retry logic under weak network conditions. Restricts networking strictly to verified university email domains.
-          </div>
-        </div>
 
-        <div class="project-card">
-          <div class="project-header">
-            <span class="project-title">Melora</span>
-            <div class="project-links">
-              <a href="https://github.com/Devikumar143/melora" target="_blank">Codebase</a>
-            </div>
+          <div class="project-card">
+            <h3 class="project-title">2. Melora</h3>
+            <p class="project-meta">TYPE: NATIVE ANDROID MUSIC PLAYER APPLICATION // STACK: KOTLIN, JETPACK COMPOSE, MEDIA3 / EXOPLAYER, ANDROID SDK, PALETTE API</p>
+            <p class="project-details">
+              A native Android music player application exploring modern material styling, custom playlist themes, real-time media search, and high-performance local playback services.
+            </p>
           </div>
-          <p class="project-desc">A native Android music player application exploring modern material styling, custom playlist themes, real-time media search, and high-performance local playback services.</p>
-          <div class="project-details">
-            <strong>Key Tech Challenge Solved:</strong> Engineered a foreground playback service powered by Android Media3 / ExoPlayer supporting dynamic system AudioFocus listeners. Integrated the Palette API to dynamically recolor playback layouts matching album artwork.
-          </div>
-        </div>
 
-        <div class="project-card">
-          <div class="project-header">
-            <span class="project-title">Memora</span>
-            <div class="project-links">
-              <a href="https://github.com/Devikumar143/Memora" target="_blank">Codebase</a>
-            </div>
+          <div class="project-card">
+            <h3 class="project-title">3. Memora</h3>
+            <p class="project-meta">TYPE: NATIVE ANDROID NOTES & MEMO MANAGER // STACK: KOTLIN, ANDROID SDK, ROOM SQLITE (FTS4), SQLCIPHER, COROUTINES</p>
+            <p class="project-details">
+              A native Android memo and notes manager application built using Clean Architecture models for secure disk caching and fast query capabilities.
+            </p>
           </div>
-          <p class="project-desc">A native Android memo and notes manager application built using Clean Architecture models for secure disk caching and fast query capabilities.</p>
-          <div class="project-details">
-            <strong>Key Tech Challenge Solved:</strong> Built an localized full-text indexing system using Room SQLite's FTS4 tables running queries inside Coroutines scopes. Leveraged SQLCipher to encrypt database logs dynamically.
-          </div>
-        </div>
 
-        <div class="project-card">
-          <div class="project-header">
-            <span class="project-title">JU Web Store</span>
-            <div class="project-links">
-              <a href="https://github.com/Devikumar143/store" target="_blank">Codebase</a>
-            </div>
+          <div class="project-card">
+            <h3 class="project-title">4. Quadra</h3>
+            <p class="project-meta">TYPE: ESPORTS BRACKET & TOURNAMENT SCHEDULER WEB APP // STACK: JAVASCRIPT, HTML, CSS, SVG CANVAS APIS</p>
+            <p class="project-details">
+              An online tournament manager designed for scheduling esports matches, aggregating player statistics, and tracking leaderboard standings.
+            </p>
           </div>
-          <p class="project-desc">A localized peer-to-peer textbook and student-exchange marketplace web application designed for campus premises.</p>
-          <div class="project-details">
-            <strong>Key Tech Challenge Solved:</strong> Created a zero-backend persistent item caching layer using local Web Storage APIs, synchronizing local shopping carts via custom state wrappers.
-          </div>
-        </div>
-      </section>
+        </section>
+      </div>
 
-      <section>
-        <h2>Professional Journey</h2>
-        <div class="timeline-item">
-          <span class="timeline-year">2026 & Beyond</span>
-          <div class="timeline-title">Advanced Architectures & Systems</div>
-          <p class="timeline-desc">Focused on low-latency modular designs, background lifecycle optimizations, and open-source systems frameworks contribution.</p>
-        </div>
-        <div class="timeline-item">
-          <span class="timeline-year">2025</span>
-          <div class="timeline-title">Full-Stack Web & Hybrid Systems</div>
-          <p class="timeline-desc">Expanded development scope into web ecosystems. Built JU Web Store and bracket organizer Quadra.</p>
-        </div>
-        <div class="timeline-item">
-          <span class="timeline-year">2024</span>
-          <div class="timeline-title">Started Android Development</div>
-          <p class="timeline-desc">Started engineering native Android applications using Kotlin, Jetpack Compose, and Room local caching systems.</p>
-        </div>
-      </section>
+      <!-- Right Column: Contact, About, Education, Skills -->
+      <div class="right-col">
+        <section>
+          <h2>About Me</h2>
+          <p class="summary-text">
+            I am passionate about designing digital experiences that are both visually stunning and intuitive, and always strive to create designs that delight and engage users.
+          </p>
+        </section>
+
+        <section>
+          <h2>Education</h2>
+          <div class="education-block">
+            <div class="education-school">Joy University Kanyakumari</div>
+            <div class="education-degree">Bachelor of Technology - cybersecurity</div>
+          </div>
+        </section>
+
+        <section>
+          <h2>Skills</h2>
+          <div class="skills-list">
+            <div class="skill-item">Network security</div>
+            <div class="skill-item">Risk assessment</div>
+            <div class="skill-item">Data encryption</div>
+            <div class="skill-item">Incident response</div>
+            <div class="skill-item">Planning</div>
+            <div class="skill-item">Team management</div>
+            <div class="skill-item">Training and Development</div>
+            <div class="skill-item">Active listening</div>
+          </div>
+        </section>
+      </div>
     </div>
   </div>
 
