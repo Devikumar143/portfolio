@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Devi Kumar - Resume</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #09090b;
+      --text: #e4e4e7;
+      --text-muted: #a1a1aa;
+      --accent: #22d3ee;
+      --border: #27272a;
+      --panel: #18181b;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Outfit', sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      padding: 40px 20px;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      background-color: rgba(24, 24, 27, 0.4);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 40px;
+      position: relative;
+    }
+
+    header {
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 24px;
+      margin-bottom: 32px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .header-left h1 {
+      font-size: 36px;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      color: #fff;
+      line-height: 1.1;
+    }
+
+    .header-left p {
+      font-size: 16px;
+      color: var(--accent);
+      font-family: 'Space Mono', monospace;
+      margin-top: 6px;
+      font-weight: 600;
+    }
+
+    .header-right {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 4px;
+      font-size: 13px;
+      font-family: 'Space Mono', monospace;
+      color: var(--text-muted);
+    }
+
+    .header-right a {
+      color: var(--text);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .header-right a:hover {
+      color: var(--accent);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-cols: 1fr;
+      gap: 32px;
+    }
+
+    section {
+      margin-bottom: 16px;
+    }
+
+    h2 {
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      font-family: 'Space Mono', monospace;
+      color: var(--text-muted);
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 6px;
+      margin-bottom: 16px;
+    }
+
+    .skills-flex {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .skill-badge {
+      font-size: 12px;
+      font-family: 'Space Mono', monospace;
+      background-color: var(--panel);
+      border: 1px solid var(--border);
+      color: var(--text);
+      padding: 4px 10px;
+      border-radius: 6px;
+    }
+
+    .project-card {
+      margin-bottom: 24px;
+    }
+
+    .project-card:last-child {
+      margin-bottom: 0;
+    }
+
+    .project-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 6px;
+    }
+
+    .project-title {
+      font-size: 18px;
+      font-weight: 700;
+      color: #fff;
+    }
+
+    .project-links {
+      font-size: 11px;
+      font-family: 'Space Mono', monospace;
+      display: flex;
+      gap: 12px;
+    }
+
+    .project-links a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    .project-desc {
+      font-size: 13.5px;
+      color: var(--text-muted);
+      margin-bottom: 10px;
+      text-align: justify;
+    }
+
+    .project-details {
+      background-color: rgba(24, 24, 27, 0.25);
+      border-left: 2px solid var(--accent);
+      padding: 8px 12px;
+      margin-left: 4px;
+      margin-bottom: 12px;
+      font-size: 12.5px;
+      color: var(--text);
+    }
+
+    .timeline-item {
+      position: relative;
+      padding-left: 24px;
+      margin-bottom: 20px;
+      border-left: 1px solid var(--border);
+    }
+
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: -5px;
+      top: 6px;
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background-color: var(--accent);
+      border: 2px solid var(--bg);
+    }
+
+    .timeline-year {
+      font-family: 'Space Mono', monospace;
+      font-size: 12px;
+      color: var(--accent);
+      font-weight: 700;
+    }
+
+    .timeline-title {
+      font-size: 15px;
+      font-weight: 600;
+      color: #fff;
+    }
+
+    .timeline-desc {
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-top: 2px;
+    }
+
+    .print-btn {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      background-color: #fff;
+      color: #000;
+      border: none;
+      padding: 10px 20px;
+      font-size: 13px;
+      font-weight: 700;
+      border-radius: 30px;
+      cursor: pointer;
+      font-family: 'Outfit', sans-serif;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+      transition: transform 0.2s, background-color 0.2s;
+    }
+
+    .print-btn:hover {
+      background-color: #e4e4e7;
+      transform: translateY(-2px);
+    }
+
+    @media print {
+      body {
+        background-color: #fff;
+        color: #000;
+        padding: 0;
+      }
+      :root {
+        --accent: #0891b2;
+        --border: #e4e4e7;
+      }
+      .container {
+        border: none;
+        padding: 0;
+        max-width: 100%;
+        background: transparent;
+      }
+      .print-btn {
+        display: none;
+      }
+      .header-left h1, .timeline-title, .project-title {
+        color: #000;
+      }
+      .skill-badge {
+        background-color: #f4f4f5;
+        border-color: #e4e4e7;
+        color: #000;
+      }
+      .project-details {
+        background-color: #fafafa;
+        color: #27272a;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="header-left">
+        <h1>Devi Kumar</h1>
+        <p>Software Engineer // Android Specialist</p>
+      </div>
+      <div class="header-right">
+        <span>Email: <a href="mailto:anegondhikumar2@gmail.com">anegondhikumar2@gmail.com</a></span>
+        <span>GitHub: <a href="https://github.com/Devikumar143" target="_blank">github.com/Devikumar143</a></span>
+        <span>LinkedIn: <a href="https://www.linkedin.com/in/devi-kumar-b3659328a" target="_blank">linkedin.com/in/devi-kumar-b3659328a</a></span>
+      </div>
+    </header>
+
+    <div class="grid">
+      <section>
+        <h2>Technical Core Skills</h2>
+        <div class="skills-flex">
+          <div class="skill-badge">Kotlin</div>
+          <div class="skill-badge">Android SDK</div>
+          <div class="skill-badge">Jetpack Compose</div>
+          <div class="skill-badge">Media3 / ExoPlayer</div>
+          <div class="skill-badge">Room DB</div>
+          <div class="skill-badge">Firebase</div>
+          <div class="skill-badge">TypeScript</div>
+          <div class="skill-badge">JavaScript</div>
+          <div class="skill-badge">HTML5 / CSS3</div>
+          <div class="skill-badge">Git</div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Key Engineering Projects</h2>
+        
+        <div class="project-card">
+          <div class="project-header">
+            <span class="project-title">Unisphere</span>
+            <div class="project-links">
+              <a href="https://github.com/Devikumar143/unisphere" target="_blank">Codebase</a>
+            </div>
+          </div>
+          <p class="project-desc">A premium social media application designed specifically for students to establish connections, collaborate, share academic resources, and build campus networks.</p>
+          <div class="project-details">
+            <strong>Key Tech Challenge Solved:</strong> Implemented an offline-first repository pattern utilizing Room SQLite as a write-through buffer with automatic transaction retry logic under weak network conditions. Restricts networking strictly to verified university email domains.
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-header">
+            <span class="project-title">Melora</span>
+            <div class="project-links">
+              <a href="https://github.com/Devikumar143/melora" target="_blank">Codebase</a>
+            </div>
+          </div>
+          <p class="project-desc">A native Android music player application exploring modern material styling, custom playlist themes, real-time media search, and high-performance local playback services.</p>
+          <div class="project-details">
+            <strong>Key Tech Challenge Solved:</strong> Engineered a foreground playback service powered by Android Media3 / ExoPlayer supporting dynamic system AudioFocus listeners. Integrated the Palette API to dynamically recolor playback layouts matching album artwork.
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-header">
+            <span class="project-title">Memora</span>
+            <div class="project-links">
+              <a href="https://github.com/Devikumar143/Memora" target="_blank">Codebase</a>
+            </div>
+          </div>
+          <p class="project-desc">A native Android memo and notes manager application built using Clean Architecture models for secure disk caching and fast query capabilities.</p>
+          <div class="project-details">
+            <strong>Key Tech Challenge Solved:</strong> Built an localized full-text indexing system using Room SQLite's FTS4 tables running queries inside Coroutines scopes. Leveraged SQLCipher to encrypt database logs dynamically.
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-header">
+            <span class="project-title">JU Web Store</span>
+            <div class="project-links">
+              <a href="https://github.com/Devikumar143/store" target="_blank">Codebase</a>
+            </div>
+          </div>
+          <p class="project-desc">A localized peer-to-peer textbook and student-exchange marketplace web application designed for campus premises.</p>
+          <div class="project-details">
+            <strong>Key Tech Challenge Solved:</strong> Created a zero-backend persistent item caching layer using local Web Storage APIs, synchronizing local shopping carts via custom state wrappers.
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Professional Journey</h2>
+        <div class="timeline-item">
+          <span class="timeline-year">2026 & Beyond</span>
+          <div class="timeline-title">Advanced Architectures & Systems</div>
+          <p class="timeline-desc">Focused on low-latency modular designs, background lifecycle optimizations, and open-source systems frameworks contribution.</p>
+        </div>
+        <div class="timeline-item">
+          <span class="timeline-year">2025</span>
+          <div class="timeline-title">Full-Stack Web & Hybrid Systems</div>
+          <p class="timeline-desc">Expanded development scope into web ecosystems. Built JU Web Store and bracket organizer Quadra.</p>
+        </div>
+        <div class="timeline-item">
+          <span class="timeline-year">2024</span>
+          <div class="timeline-title">Started Android Development</div>
+          <p class="timeline-desc">Started engineering native Android applications using Kotlin, Jetpack Compose, and Room local caching systems.</p>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <button class="print-btn" onclick="window.print()">Print / Save PDF</button>
+</body>
+</html>
